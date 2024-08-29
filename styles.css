@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 270;
+    --bg-color: hsl(var(--hue), 0%, 100%);
+    --title-color: hsl(var(--hue), 6%, 17%);
+    --buttons-primary: hsl(var(--hue), 9%, 89%);
+    --buttons-text: hsl(var(--hue), 6%, 21%);
+    --buttons-hover: hsl(var(--hue), 89%, 56%);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main {
+    padding: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 83rem;
+    width: 100%;
+    gap: 1.6rem;
+}
+
+.timer__timer-title {
+    font-size: 12.6rem;
+    display: flex;
+    color: var(--title-color);
+    font-weight: 500;
+}
+
+.timer__actions {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer__actions button {
+    background: transparent;
+    font-size: 4.8rem;
+
+    display: flex;
+    cursor: pointer;
+    border: none;
+}
+
+.sounds__options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.sounds__options button {
+    padding: 4.8rem;
+    font-size: 5.2rem;
+    border-radius: 2.4rem;
+    background-color: var(--buttons-primary);
+    color: var(--buttons-text);
+    border: none;
+    cursor: pointer;
+
+    transition: all ease-in-out .1s;
+}
+
+.sounds__options button:hover {
+    background-color: var(--buttons-hover);
+    color: var(--bg-color);
+}
+
+@media(max-width: 750px) {
+    .main {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+}
