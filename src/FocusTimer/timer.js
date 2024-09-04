@@ -22,18 +22,17 @@ function updateCountdownOnInterface() {
 function handleCountdownStatus() {
     sounds.playSound('../../assets/audios/button-press.wav');
 
-    if (appState.isRunning) {
-        appState.lastDateRegistered = new Date();
-        countdown(appState.totalTimeInSeconds)
-    }
+    if (appState.isRunning) countdown(appState.totalTimeInSeconds);
     else clearInterval(appState.countdownId)
 }
 
 function countdown() {
     appState.countdownId = setInterval(() => {
         if (appState.totalTimeInSeconds <= 0) {
-            appState.soundPlaying.pause();
             sounds.playSound('../../assets/audios/kitchen-timer.mp3');
+            if (appState.soundPlaying) {
+                appState.soundPlaying.pause();
+            }
 
             clearInterval(appState.countdownId);
             resetTimerToDefault();
