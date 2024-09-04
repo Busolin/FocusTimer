@@ -91,10 +91,12 @@ body {
     transition: all ease-in-out .1s;
 }
 
-.sounds__options button:hover {
+.sounds__options button:hover,
+.sounds__options button.active {
     background-color: var(--buttons-hover);
     color: var(--bg-color);
 }
+
 
 @media(max-width: 750px) {
     .main {

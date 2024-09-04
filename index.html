@@ -13,7 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg"> -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-svg">
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="module" src="./src/main.js" defer></script>
 </head>
@@ -22,38 +23,38 @@
     <main class="main">
         <section class="timer">
             <h1 class="timer__timer-title">
-                <span>25</span>
+                <span id="minutes">25</span>
                 <span>:</span>
-                <span>00</span>
+                <span id="seconds">00</span>
             </h1>
 
             <div class="timer__actions">
-                <button>
+                <button class="action-btn" id="play">
                     <i class="ph-play-circle ph-bold"></i>
                 </button>
-                <button>
+                <button class="action-btn" id="pause">
                     <i class="ph-stop-circle ph-bold"></i>
                 </button>
-                <button>
+                <button class="action-btn">
                     <i class="ph-bold ph-plus-circle"></i>
                 </button>
-                <button>
+                <button class="action-btn">
                     <i class="ph-bold ph-minus-circle"></i>
                 </button>
             </div>
         </section>
         <section class="sounds">
             <div class="sounds__options">
-                <button>
+                <button class="sound-btn" id="floresta">
                     <i class="ph-tree ph-bold"></i>
                 </button>
-                <button>
+                <button class="sound-btn" id="chuva">
                     <i class="ph-cloud-rain ph-bold"></i>
                 </button>
-                <button>
+                <button class="sound-btn" id="cafeteria">
                     <i class="ph-bold ph-storefront"></i>
                 </button>
-                <button>
+                <button class="sound-btn" id="lareira">
                     <i class="ph-bold ph-fire"></i>
                 </button>
             </div>
